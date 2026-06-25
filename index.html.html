@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para mi mejor amigo, Jay 💖</title>
+
+    <style>
+
+        /* Estilos Base y Fondo Dinámico */
+
+        body {
+
+            margin: 0;
+
+            padding: 0;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            background-color: #ff8fb1; 
+
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            overflow: hidden;
+
+            position: relative;
+
+        }
+
+
+
+        .card-container {
+
+            position: relative;
+
+            z-index: 10;
+
+        }
+
+
+
+        /* La tarjeta blanca */
+
+        .card {
+
+            background-color: white;
+
+            padding: 40px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
+            max-width: 420px;
+
+            width: 85%;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            border: 1px solid rgba(255, 255, 255, 0.8);
+
+        }
+
+
+
+        .cake-emoji {
+
+            font-size: 5.5rem;
+
+            margin-bottom: 15px;
+
+        }
+
+
+
+        /* Títulos estilo la imagen original */
+
+        .main-title {
+
+            font-size: 2.8rem;
+
+            margin: 0;
+
+            color: #1a1a1a;
+
+            font-family: 'Brush Script MT', 'Georgia', cursive;
+
+        }
+
+
+
+        .subtitle {
+
+            font-size: 1.3rem;
+
+            color: #555;
+
+            margin-top: 5px;
+
+            margin-bottom: 20px;
+
+            letter-spacing: 1px;
+
+        }
+
+
+
+        /* Dedicatoria Personalizada e Intensa */
+
+        .dedication {
+
+            font-size: 1.05rem;
+
+            color: #333;
+
+            margin: 0;
+
+            line-height: 1.6;
+
+            text-align: center;
+
+        }
+
+
+
+        .heart-inline {
+
+            color: #e02f5e;
+
+            display: inline-block;
+
+            animation: pulse 0.6s infinite alternate;
+
+        }
+
+
+
+        @keyframes pulse {
+
+            to { transform: scale(1.15); }
+
+        }
+
+
+
+        /* ========================================================
+
+           La notita secreta en la esquinita de la pantalla
+
+           ======================================================== */
+
+        .dev-note {
+
+            position: absolute;
+
+            bottom: 15px;
+
+            right: 20px;
+
+            font-size: 0.75rem;
+
+            color: rgba(255, 255, 255, 0.85);
+
+            font-style: italic;
+
+            text-align: right;
+
+            z-index: 20;
+
+            max-width: 250px;
+
+            line-height: 1.3;
+
+            background: rgba(0, 0, 0, 0.15);
+
+            padding: 6px 12px;
+
+            border-radius: 10px;
+
+            pointer-events: none;
+
+        }
+
+
+
+        /* ========================================================
+
+           Efecto de Fondo de Estrellas y Corazones
+
+           ======================================================== */
+
+        .background-animation {
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            width: 100%;
+
+            height: 100%;
+
+            z-index: 1;
+
+        }
+
+
+
+        .falling-element {
+
+            position: absolute;
+
+            color: white;
+
+            font-size: 1.2rem;
+
+            opacity: 0.7;
+
+            user-select: none;
+
+            animation: fall linear infinite;
+
+        }
+
+
+
+        @keyframes fall {
+
+            0% { transform: translateY(-10vh) translateX(0) scale(1); opacity: 0; }
+
+            10% { opacity: 0.7; }
+
+            100% { transform: translateY(110vh) translateX(20px) scale(0.8); opacity: 0; }
+
+        }
+
+
+
+        /* Variaciones de la lluvia de estrellas/corazones */
+
+        .e1 { left: 5%; animation-duration: 6s; animation-delay: 0s; font-size: 1.5rem; }
+
+        .e2 { left: 15%; animation-duration: 8s; animation-delay: 2s; font-size: 1.1rem; }
+
+        .e3 { left: 25%; animation-duration: 7s; animation-delay: 1s; font-size: 1.3rem; color: rgba(255, 255, 255, 0.4); }
+
+        .e4 { left: 35%; animation-duration: 9s; animation-delay: 3s; font-size: 1rem; }
+
+        .e5 { left: 45%; animation-duration: 10s; animation-delay: 0.5s; font-size: 1.6rem; color: #ffbfcc; }
+
+        .e6 { left: 55%; animation-duration: 6.5s; animation-delay: 1.5s; font-size: 1.4rem; }
+
+        .e7 { left: 65%; animation-duration: 7.5s; animation-delay: 2.5s; font-size: 1.2rem; }
+
+        .e8 { left: 75%; animation-duration: 8.5s; animation-delay: 0.2s; font-size: 1.1rem; }
+
+        .e9 { left: 85%; animation-duration: 9.5s; animation-delay: 3.5s; font-size: 1.3rem; }
+
+        .e10 { left: 95%; animation-duration: 10.5s; animation-delay: 1s; font-size: 1.7rem; color: rgba(255, 255, 255, 0.5); }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <!-- Fondo Animado -->
+
+    <div class="background-animation">
+
+        <div class="falling-element e1">★</div>
+
+        <div class="falling-element e2">✦</div>
+
+        <div class="falling-element e3">♥</div>
+
+        <div class="falling-element e4">☆</div>
+
+        <div class="falling-element e5">❤</div>
+
+        <div class="falling-element e6">✴</div>
+
+        <div class="falling-element e7">💖</div>
+
+        <div class="falling-element e8">★</div>
+
+        <div class="falling-element e9">✦</div>
+
+        <div class="falling-element e10">♥</div>
+
+    </div>
+
+
+
+    <!-- La Notita en la Esquina -->
+
+    <div class="dev-note">
+
+        Nota de la programadora: Es la primera vez que hago una página web en mi vida. Sé que puede no ser perfecta, pero la hice aprendiendo con unos tutoriales de youtube y tiktok 🥲​. Espero que te guste mucho. ✨<br>
+
+pdta: El proximo año la voy a hacer mas bonita 😜​
+
+    </div>
+
+
+
+    <!-- Contenedor de la Tarjeta -->
+
+    <div class="card-container">
+
+        <div class="card">
+
+            <div class="cake-emoji">🎂</div>
+
+
+
+            <h1 class="main-title">Happy Birthday</h1>
+
+            <h2 class="subtitle">my Jay</h2>
+
+
+
+            <!-- mensaje -->
+
+            <p class="dedication">
+
+            Aunque hoy la distancia no me permita darte un abrazo en persona, quería regalarte algo único, con mi toque de programadora ​🥰​ <br><br>
+
+                No tengo las palabras exactas para expresar cuánto te quiero y lo afortunada que soy de tenerte, pero espero que este detalle te recuerde lo importante y unico que eres para mí. <br><br>
+
+                Eres el mejor amigo del mundo entero. <span class="heart-inline">❤</span> ¡Disfruta muchisimo tu día, Jay!
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html> 
